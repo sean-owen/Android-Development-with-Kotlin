@@ -22,9 +22,11 @@ class MainActivity : AppCompatActivity() {
      * Roll the dice and update the screen with the result.
      */
     private fun rollDice() {
-        val diceRoll = Dice(6).roll();
-        val resultTextView: TextView = findViewById(R.id.textView);
-        resultTextView.text = diceRoll.toString();
+        val dice1ResultTextView: TextView = findViewById(R.id.dice1Result);
+        dice1ResultTextView.text = Dice(6).roll().toString();
+
+        val dice2ResultTextView: TextView = findViewById(R.id.dice2Result);
+        dice2ResultTextView.text = Dice(6).roll().toString();
     }
 }
 

@@ -7,23 +7,53 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/dice1Result"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428"
         tools:text="1" />
+
+    <TextView
+        android:id="@+id/dice2Result"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:text="2" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="53dp"
         android:text="@string/roll"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/dice2Result"
+        app:layout_constraintTop_toBottomOf="@+id/dice2Label" />
+
+    <TextView
+        android:id="@+id/dice1Label"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:text="@string/dice_1_result"
+        app:layout_constraintEnd_toStartOf="@+id/dice1Result"
+        app:layout_constraintTop_toTopOf="@+id/dice1Result" />
+
+    <TextView
+        android:id="@+id/dice2Label"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:text="@string/dice_2_result"
+        app:layout_constraintEnd_toStartOf="@+id/dice2Result"
+        app:layout_constraintTop_toBottomOf="@+id/dice1Label" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
